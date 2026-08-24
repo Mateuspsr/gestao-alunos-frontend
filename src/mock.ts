@@ -1,28 +1,69 @@
-/*
- * DADOS DE MENTIRA (mock.ts) — ESQUELETO, implemente você mesmo
- * ============================================================
- *
- * Enquanto o backend não está ligado (isso é o Módulo III), o app precisa de
- * dados para mostrar. Este arquivo é o "banco de dados de mentira".
- *
- * IMPORTANTE: escreva os objetos no MESMO formato que a API devolve
- * (veja docs/CONTRATO_API.md). Assim, quando trocarmos o mock por fetch,
- * nenhum componente precisa mudar.
- */
+import type { Aluno, Disciplina } from "./types";
 
-import type { Aluno } from "./types";
-
-// TODO 1: preencha com pelo menos 6 alunos.
-//   Varie os dados de propósito, para os seus filtros terem o que filtrar:
-//   - algumas médias abaixo de 6 e outras acima;
-//   - idades diferentes (menores e maiores de 18);
-//   - nomes variados (para testar a busca por texto).
-//   DICA do formato de um item:
-//     { id: 1, nome: "Ana Souza", idade: 20, matricula: "2026001", media: 8.5 },
 export const alunosIniciais: Aluno[] = [
-  // TODO: seus alunos aqui
+  {
+    id: 1,
+    nome: "Ana Souza",
+    idade: 20,
+    matricula: "2026001",
+    media: 8.5,
+  },
+  {
+    id: 2,
+    nome: "Bruno Lima",
+    idade: 17,
+    matricula: "2026002",
+    media: 5.4,
+  },
+  {
+    id: 3,
+    nome: "Carla Mendes",
+    idade: 22,
+    matricula: "2026003",
+    media: 7.2,
+  },
+  {
+    id: 4,
+    nome: "Daniel Rocha",
+    idade: 16,
+    matricula: "2026004",
+    media: 9.1,
+  },
+  {
+    id: 5,
+    nome: "Fernanda Alves",
+    idade: 19,
+    matricula: "2026005",
+    media: 4.8,
+  },
+  {
+    id: 6,
+    nome: "Gabriel Santos",
+    idade: 21,
+    matricula: "2026006",
+    media: 6.3,
+  },
 ];
 
-// TODO 2: crie também `disciplinasIniciais` (pelo menos 4), tipada como
-//   Disciplina[]. Lembre do campo carga_horaria.
-//   DICA: { id: 1, nome: "Python", carga_horaria: 40 },
+export const disciplinasIniciais: Disciplina[] = [
+  {
+    id: 1,
+    nome: "Matemática",
+    carga_horaria: 60,
+  },
+  {
+    id: 2,
+    nome: "Programação",
+    carga_horaria: 80,
+  },
+  {
+    id: 3,
+    nome: "Banco de Dados",
+    carga_horaria: 60,
+  },
+  {
+    id: 4,
+    nome: "Redes de Computadores",
+    carga_horaria: 40,
+  },
+];
