@@ -1,20 +1,13 @@
-/*
- * ESTILOS (index.css) — quase vazio DE PROPÓSITO
- * =============================================
- *
- * Você já aprendeu CSS no Módulo 10. Aqui vem só o mínimo (um reset e algumas
- * variáveis para você começar) — a IDENTIDADE VISUAL do portal é sua:
- * cores, tipografia, cards ou tabela, tema claro ou escuro, tudo sua escolha.
- * Capriche: a apresentação vale nota (veja a rubrica em docs/DESAFIOS.md).
- *
- * Só duas exigências técnicas:
- *   - o estilo mora em arquivo CSS (nada de `style={{...}}` espalhado no JSX);
- *   - o layout precisa funcionar no celular (pelo menos uma @media).
- */
-
-/* --- reset mínimo (mantenha) --- */
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --fundo: #f6f7f9;
+  --superficie: #ffffff;
+  --texto: #1c2230;
+  --primaria: #2b5cd9;
+  --borda: #dde1e8;
 }
 
 body {
@@ -24,40 +17,57 @@ body {
   color: var(--texto);
 }
 
-/* --- variáveis: troque estes valores pelo SEU tema --- */
-:root {
-  --fundo: #f6f7f9;
-  --superficie: #ffffff;
-  --texto: #1c2230;
-  --primaria: #2b5cd9;
-  --borda: #dde1e8;
-  --espaco: 16px;
+.cabecalho {
+  padding: 20px;
+  background: var(--superficie);
+  border-bottom: 1px solid var(--borda);
 }
 
-/* TODO: escreva daqui para baixo os estilos dos SEUS componentes
-   (cabeçalho, cards/tabela, formulário, botões, estados de foco...). */
+.cabecalho h1 {
+  margin: 0 0 8px;
+}
 
-/* ==========================================================================
-   APAGUE deste ponto até o fim: é só o estilo da tela provisória do App.tsx.
-   ========================================================================== */
-.inicial {
-  max-width: 640px;
-  margin: 10vh auto;
-  padding: var(--espaco);
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.lista-alunos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.aluno-card {
+  padding: 16px;
   background: var(--superficie);
   border: 1px solid var(--borda);
   border-radius: 8px;
-  line-height: 1.6;
 }
 
-.inicial h1 {
+.aluno-card h2 {
   margin-top: 0;
-  color: var(--primaria);
 }
 
-.inicial code {
-  background: var(--fundo);
-  padding: 2px 5px;
-  border-radius: 4px;
-  font-size: 0.9em;
+.status {
+  font-weight: bold;
+}
+
+.aprovado {
+  color: green;
+}
+
+.reprovado {
+  color: crimson;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 16px;
+  }
+
+  .lista-alunos {
+    grid-template-columns: 1fr;
+  }
 }

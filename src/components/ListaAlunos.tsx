@@ -1,13 +1,13 @@
-import type {Aluno} from "../types";
+import type { Aluno } from "../types";
 import AlunoCard from "./AlunoCard";
 
 interface ListaAlunosProps {
-    alunos: Aluno[];
+  alunos: Aluno[];
 }
 
 function ListaAlunos({ alunos }: ListaAlunosProps) {
   return (
-    <section>
+    <section className="lista-alunos">
       {alunos.map((aluno) => (
         <AlunoCard
           key={aluno.id}
@@ -17,4 +17,5 @@ function ListaAlunos({ alunos }: ListaAlunosProps) {
     </section>
   );
 }
+
 export default ListaAlunos;

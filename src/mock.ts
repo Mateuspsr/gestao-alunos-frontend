@@ -3,10 +3,10 @@ import type { Aluno, Disciplina } from "./types";
 export const alunosIniciais: Aluno[] = [
   {
     id: 1,
-    nome: "Ana Souza",
-    idade: 20,
+    nome: "Mateus Pinheiro",
+    idade: 17,
     matricula: "2026001",
-    media: 8.5,
+    media: 10.0,
   },
   {
     id: 2,
