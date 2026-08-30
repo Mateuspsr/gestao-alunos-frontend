@@ -24,3 +24,14 @@ export interface FiltrosAluno {
   idade_minima?: number;
   media_minima?: number;
 }
+
+export interface MatriculaDisciplina {
+  id: number;
+  aluno_id: number;
+  disciplina_id: number;
+  nota: number;
+}
+
+export interface DisciplinaDoAluno extends Disciplina {
+  nota: number;
+}
